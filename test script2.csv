@@ -1,0 +1,24 @@
+sheet2renpy2,,
+,dimikira,Hello! I decided to redo this converter using Python this time! Hope you like it!
+,dimikira,"Before I made this in javascript but... I'm just more comfy with Python, so here we are."
+,dimikira,Once again you can type out your dialogue here in column C. Just make sure you're always defining a speaker.
+,dimikira,Wanna add in menus? Go like this.
+,menu,optionalLabel
+,choice,choice one text
+,dimikira,Here's outcome one-
+,choice,choice 2 text
+,dimikira,and outcome two!
+,,
+,dimikira,See that empty row right above? The one I made blue? You need that to terminate the menu! Also makes it easier to read IMO.
+,dimikira,Same goes for If-statements!
+,if,condition_one
+,dimikira,value one text
+,elif,condition_two
+,dimikira,value two text
+,else,
+,dimikira,value three text
+,,
+,dimikira,Tadaa~! All done!
+,dimikira,Just export to CSV and let the code do the rest. :)
+,,#and yes comments work as well ~
+,,#it doesnt do everything but it pretty good right?
