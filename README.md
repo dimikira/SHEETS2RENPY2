@@ -1,9 +1,8 @@
 # SHEET2RENPY2
 Take your .csv and export it to .rpy !
 
-instructions:
 THE SHEET:
-![image](https://github.com/user-attachments/assets/cc363b0d-40ef-4888-b08e-482b4ac7f01a)
+<br>![image](https://github.com/user-attachments/assets/cc363b0d-40ef-4888-b08e-482b4ac7f01a)
 <hr>
 <br>How to format the CSV: GENERAL
 <li>Column A = Label
@@ -31,3 +30,22 @@ How to format the CSV: IF STATEMENT
   <li>  Underneath your if/elif row, add in any dialouge that's realted to the specific condition.
   <li> To end with an else block, type else into column B, and the associated text in the row underneath.
   <li> To close the statement, add an empty row afterwords.
+<hr>
+    
+THE RENPY:
+<br>![image](https://github.com/user-attachments/assets/7c190e78-186f-4461-ac1c-c0e662c2bc7b)
+
+<li> Export your sheet as .CSV
+<li> Download and run sheets2renpy2.py
+<li> Paste the file path into the input window
+<li> RPY IT!
+<li> check the directory where you're keeping the .csv, the exported .rpy will be there!
+  
+<br>![image](https://github.com/user-attachments/assets/7882c769-49c7-4c2f-8839-65a41887ad7d)
+  
+<br>![image](https://github.com/user-attachments/assets/209eb3c5-026d-4513-a1c0-d43bb4b2f636)
+
+
+
+
+
