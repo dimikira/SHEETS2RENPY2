@@ -44,7 +44,11 @@ def sheetrenpy(thepath):
                     
                 ####REGULAR DIALOUGE
                 else:#regular dialouge
-                    print("    "+lines[1]+ "    \""+lines[2]+ "\"")
+                    if "\n" not in lines[2]:
+                        print("    "+lines[1]+ "    \""+lines[2]+ "\"")
+                    else:
+                        for ii in lines[2].splitlines():
+                            print("    "+lines[1]+ "    \""+ii+ "\"")
                     
             elif len(lines)==1 and lines[0][0]!="#":#label
                 print("label "+lines[0]+":\n")
