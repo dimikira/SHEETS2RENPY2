@@ -11,7 +11,7 @@ def sheetrenpy(thepath):
     inmenu=False
     inifmenu=False
 
-    with open(thepath, mode ='r')as file:
+    with open(thepath, mode ='r',encoding="utf8")as file:
         csvFile = csv.reader(file)
         sys.stdout = open(thepath[:-4]+'.rpy', 'w')
         for lines in  csvFile:
@@ -26,8 +26,11 @@ def sheetrenpy(thepath):
                     inmenu=True
                     print("\n        \""+lines[2]+ "\":#menu choice")
                 elif inmenu:#menu choice dialouge
-                    print("            "+lines[1]+"    \""+lines[2]+ "\"")   
-
+                    if "\n" not in lines[2]:
+                        print("            "+lines[1]+"    \""+lines[2]+ "\"")   
+                    else:
+                        for ii in lines[2].splitlines():
+                            print("            "+lines[1]+"    \""+ii+ "\"")   
                 ####IF'S
                 elif lines[1][0:2] == "if" or lines[1][0:4] == "elif":
                     if lines[1][0:2] == "if":
@@ -45,14 +48,14 @@ def sheetrenpy(thepath):
                 ####REGULAR DIALOUGE
                 else:#regular dialouge
                     if "\n" not in lines[2]:
-                        print("    "+lines[1]+ "    \""+lines[2]+ "\"")
+                            print("    "+lines[1]+ "    \""+lines[2]+ "\"")
                     else:
                         for ii in lines[2].splitlines():
                             print("    "+lines[1]+ "    \""+ii+ "\"")
                     
             elif len(lines)==1 and lines[0][0]!="#":#label
                 print("label "+lines[0]+":\n")
-
+            
             else:
                 #for i in lines:
                 if len(lines[0])>1:
@@ -64,7 +67,8 @@ def sheetrenpy(thepath):
                 else:
                     for i in lines:
                         if i!="":
-                            print("    #"+str(i))  
+                            print("    #"+str(i)) 
+
     
     sys.stdout.close()
 
