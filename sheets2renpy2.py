@@ -15,7 +15,7 @@ def sheetrenpy(thepath):
         csvFile = csv.reader(file)
         sys.stdout = open(thepath[:-4]+'.rpy', 'w')
         for lines in  csvFile:
-            if len(lines[1])>1:
+            if len(lines[1])>=1:
                 ####MENU
                 if lines[1][0:4] == "menu":#menu header
                     if len(lines[2])>1:
